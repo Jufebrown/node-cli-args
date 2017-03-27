@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
-let [,, ...args] = process.argsv
+let [,, ...args] = process.argv
 
-if (args) {
-
-}
+let sum = args.reduce((a, b) => Number(a) + Number(b), 0);
+process.stdout.write(`${sum}\n`)
